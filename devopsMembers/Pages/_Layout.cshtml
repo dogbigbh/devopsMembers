@@ -35,7 +35,10 @@
                     <li><a asp-page="/Index">Inicio</a></li>
                     <li><a asp-page="/About">Sobre</a></li>
                     <li><a asp-page="/Contact">Contato</a></li>
-                </ul>
+                    @if (User.Identity.IsAuthenticated)
+                    {  
+                             <li><a asp-page="/Index">Sair </a></li>
+                     }
             </div>
         </div>
     </nav>
